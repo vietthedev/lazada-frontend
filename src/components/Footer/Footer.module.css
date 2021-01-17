@@ -1,0 +1,83 @@
+.footer {
+  font-size: 12px;
+  padding: 20px 0 25px;
+  background-color: #f4f4f6;
+}
+
+.inner {
+  display: flex;
+  justify-content:stretch;
+  padding: 0 30px;
+}
+
+.column {
+  width: 25%;
+}
+
+.title {
+  font-size: 16px;
+  line-height: 35px;
+  margin: 0;
+  color: #0f136d;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list li {
+  line-height: 17px;
+}
+
+.list li > a {
+  color: #0f136d;
+  text-decoration: none;
+}
+
+.list li > a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.download {
+  display: flex;
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+  background-image: url('https://laz-img-cdn.alicdn.com/tfs/TB1iTziekWE3KVjSZSyXXXocXXa-42-42.png');
+  background-size: cover;
+}
+
+.downloadText {
+  padding: 0 15px;
+}
+
+.downloadText :global(.title) {
+  font-size: 16px;
+  color: #f36f36;
+}
+
+.downloadText :global(.text) {
+  color: #0f136d;
+  padding-top: 2px;
+}
+
+.appStore {
+  width: 126px;
+  height: 42px;
+  margin: 1px 0 0 20px;
+  background-image: url('https://laz-img-cdn.alicdn.com/tfs/TB1dFECEMTqK1RjSZPhXXXfOFXa-986-931.png');
+  background-position: -190px -124px;
+}
+
+.playStore {
+  width: 128px;
+  height: 43px;
+  margin-left: 10px;
+  background-image: url('https://laz-img-cdn.alicdn.com/tfs/TB1dFECEMTqK1RjSZPhXXXfOFXa-986-931.png');
+  background-position: -568px -374px;
+}

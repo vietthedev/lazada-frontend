@@ -1,0 +1,15 @@
+.container {
+  padding: 0 30px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.info {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}

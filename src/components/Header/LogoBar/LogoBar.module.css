@@ -1,0 +1,6 @@
+.logoBar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 11px 20px 0 20px;
+}

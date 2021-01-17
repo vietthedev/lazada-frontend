@@ -1,0 +1,129 @@
+.container {
+  width: 200px;
+  height: 100%;
+  line-height: 40px;
+  float: left;
+  color: #0f136d;
+  font-size: 14px;
+}
+
+.label {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  font-weight: bold;
+}
+
+.label span {
+  opacity: .85;
+  margin-left: 20px;
+  font-size: 14px;
+  color: #0f136d;
+  letter-spacing: 0;
+  line-height: 40px;
+}
+.label:hover, .label:hover span {
+  color: #ff7f50;
+}
+
+.label:hover .arrow {
+  border-color: #ff7f50;
+  transform: rotate(-135deg);
+}
+
+.arrow {
+  border: solid #0f136d;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  margin-left: 10px;
+  padding: 3px;
+  transform: rotate(45deg);
+}
+
+.menu {
+  visibility: hidden;
+}
+
+.wrapper:hover .menu {
+  visibility: visible;
+}
+
+.dropdown {
+  width: 200px;
+  height: 344px;
+  position: absolute;
+  box-shadow: 0 0 2px 0 rgba(0,0,0,.25);
+  background-color: #fff;
+  z-index: 200;
+}
+
+.dropdown ul {
+  padding: 8px 0 12px;
+  list-style: none;
+  height: auto;
+  margin: 0;
+}
+
+.dropdown li {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 200px;
+}
+
+.dropdown a {
+  display: block;
+  color: #000;
+  padding-left: 8px;
+  height: 27px;
+  line-height: 27px;
+  text-decoration: none;
+}
+
+.dropdown a:hover {
+  background-color: #eceff1;
+}
+
+.dropdown a:hover span {
+  color: #f36d00;
+}
+
+.dropdown span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  white-space: nowrap;
+  width: 172px;
+  font-size: 13px;
+  line-height: 27px;
+  color: #757575;
+  cursor: pointer;
+}
+
+.dropdownMenu {
+  composes: dropdown;
+}
+
+.dropdownMenu ul {
+  position: absolute;
+  display: none;
+}
+
+.dropdownMenu li:hover ul ul {
+  display: none;
+}
+
+.dropdownMenu li:hover ul {
+  margin-left: 200px;
+  margin-top: -37px;;
+  display: block;
+}
+
+.dropdownMenu li li:hover ul {
+  margin-left: 200px;
+  margin-top: -37px;
+  display: block;
+}

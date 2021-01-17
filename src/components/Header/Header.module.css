@@ -1,0 +1,13 @@
+.header {
+  position: relative;
+  height: 140px;
+}
+
+.header > div {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #fff;
+}

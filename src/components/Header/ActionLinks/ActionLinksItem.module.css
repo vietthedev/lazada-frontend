@@ -1,0 +1,22 @@
+.item {
+  display: inline-block;
+  position: relative;
+  padding: 0 17px;
+  font-size: 12px;
+  height: 25px;
+  line-height: 25px;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #9e9e9e;
+  text-transform: uppercase;
+  transition: all .2s ease-in-out;
+}
+
+.item:hover {
+  color: #ff7f50;
+}
+
+.itemHighlight {
+  composes: item;
+  color: #0f1568;
+}

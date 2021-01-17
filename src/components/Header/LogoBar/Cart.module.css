@@ -1,0 +1,16 @@
+.container {
+  position: relative;
+  width: 40px;
+  height: 38px;
+}
+
+.icon {
+  position: absolute;
+  width: 29px;
+  height: 26px;
+  left: 50%;
+  top: 50%;
+  margin: -12px 0 0 -14px;
+  background-image: url("https://laz-img-cdn.alicdn.com/tfs/TB1xEeTdBGw3KVjSZFDXXXWEpXa-75-66.png");
+  background-size: cover;
+}
