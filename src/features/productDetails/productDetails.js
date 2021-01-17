@@ -4,11 +4,13 @@ import { useParams } from 'react-router-dom'
 
 import { fetchProduct } from '../productList/productSlice'
 
+import Spinner from '../../components/Spinner'
+
 import styles from './productDetails.module.css'
 
 const ProductDetails = () => {
   const { productId } = useParams()
-  const { currentProduct } = useSelector(state => state.product)
+  const { currentProduct, isLoading, error } = useSelector(state => state.product)
   const [product, setProduct] = useState()
   const dispatch = useDispatch()
 
@@ -30,31 +32,37 @@ const ProductDetails = () => {
   return (
     <div className={styles.container}>
       <div className={styles.innerContainer}>
-        <div className={styles.image}>
-          <img alt={product.itemTitle} src={product.itemImg} />
-        </div>
-        <div className={styles.description}>
-          <div>
-            <h3 className={styles.title}>
-              {product.itemTitle}
-            </h3>
-          </div>
-          <div className={styles.review}>
-            <div className={styles.score}>
-              {product.itemRatingScore}/5
+        {isLoading && <Spinner />}
+        {error && <h3>Something went wrong...</h3>}
+        {!isLoading && !error && (
+          <>
+            <div className={styles.image}>
+              <img alt={product.itemTitle} src={product.itemImg} />
             </div>
-            <a href='https://www.lazada.vn'>
-              {product.itemReviews} Ratings
-            </a>
-          </div>
-          <div className={styles.price}>
-            <span className={styles.discountPrice}>{product.currency}{product.itemDiscountPrice}</span>
-            <div>
-              <span className={styles.originalPrice}>{product.itemPrice}</span>
-              <span className={styles.discount}>{product.itemDiscount}</span>
+            <div className={styles.description}>
+              <div>
+                <h3 className={styles.title}>
+                  {product.itemTitle}
+                </h3>
+              </div>
+              <div className={styles.review}>
+                <div className={styles.score}>
+                  {product.itemRatingScore}/5
+                </div>
+                <a href='https://www.lazada.vn'>
+                  {product.itemReviews} Ratings
+                </a>
+              </div>
+              <div className={styles.price}>
+                <span className={styles.discountPrice}>{product.currency}{product.itemDiscountPrice}</span>
+                <div>
+                  <span className={styles.originalPrice}>{product.itemPrice}</span>
+                  <span className={styles.discount}>{product.itemDiscount}</span>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </>
+        )}
       </div>
     </div>
   )
